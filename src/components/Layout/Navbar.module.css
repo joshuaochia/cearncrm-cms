@@ -1,0 +1,12 @@
+.nav__content li a {
+  font-size: 18px;
+}
+
+#signup {
+  border-radius: 15px !important;
+  padding: 0px 10px 0px 10px;
+}
+
+#signup a {
+  color: white !important;
+}

@@ -1,0 +1,62 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #fff7c7; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #fff7c7; /* Gecko Browsers */
+}
+
+/*
+ * Globals
+ */
+body {
+  color: #72767b;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4;
+  line-height: 28px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0 !important;
+}
+
+.primary-1 {
+  background-color: #1c31b2;
+  color: white;
+}
+
+.primary-2 {
+  background-color: #2543fb;
+  color: white;
+}
+
+.primary-3 {
+  background-color: #1a2984;
+}
+
+.secondary-1 {
+  background-image: linear-gradient(#fbab7e, #f7ce68);
+}
+
+.secondary-2 {
+  background-image: linear-gradient(#ffbe9a, #ffe4a1);
+}
+
+.secondary-3 {
+  background-image: linear-gradient(#fbab7e, #f7ce68);
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: 16px;
+  }
+}
