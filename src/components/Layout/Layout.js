@@ -7,11 +7,10 @@ const Layout = (props) => {
   return (
     <React.Fragment>
       <Announcement />
-      <div className="container">
-        <Navbar />
-        {props.children}
-        <Footer />
-      </div>
+
+      <Navbar />
+      {props.children}
+      <Footer />
     </React.Fragment>
   );
 };

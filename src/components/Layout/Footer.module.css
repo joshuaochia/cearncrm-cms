@@ -3,9 +3,30 @@
   padding: 20px;
 }
 .footer__cta__btn {
+  text-align: right;
+}
+.footer__cta__btn button {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+.footer__cta__btn button a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px;
-  border-radius: 15px;
+}
+
+.footer__content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__cta {
+    text-align: center !important;
+  }
+  .footer__cta__btn {
+    text-align: center;
+  }
 }

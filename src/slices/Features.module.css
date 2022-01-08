@@ -1,0 +1,15 @@
+.features {
+  margin-top: 150px;
+}
+.card_content {
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.card_content hr {
+  height: 3px;
+  color: #fbab7e;
+  width: 50%;
+  margin: auto;
+}

@@ -15,14 +15,28 @@
  */
 body {
   color: #72767b;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans" !important;
   font-size: 16px;
-  font-weight: 400;
   letter-spacing: 0.4;
   line-height: 28px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Ubuntu";
+}
+
+h5,
+h6 {
+  font-family: "Ubuntu";
+  font-weight: lighter !important;
+}
+
 p {
+  letter-spacing: 0.06em;
+  line-height: 25px;
   font-size: 16px;
   margin: 0 !important;
 }

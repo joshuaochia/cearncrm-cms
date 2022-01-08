@@ -1,0 +1,15 @@
+.custom__card {
+  border-radius: 20px;
+}
+
+.custom__card hr {
+  height: 3px;
+  color: #fbab7e;
+  width: 50%;
+  margin: auto;
+}
+
+.parent_cards {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}

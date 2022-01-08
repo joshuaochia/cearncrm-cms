@@ -1,0 +1,12 @@
+.features__content {
+  width: 300px;
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    #fbab7e 50%,
+    #f7ce68 100%
+  );
+}

@@ -1,0 +1,20 @@
+.pricing__item:nth-child(odd) button {
+  background-color: #1c31b2;
+}
+
+.pricing__item {
+  background: #fafafa;
+  border: 2px solid #e6e6e6;
+  border-radius: 15px;
+}
+.content p span {
+  padding-right: 8px;
+}
+
+.pricing__item button {
+  border-radius: 15px;
+  border: transparent;
+  color: white;
+  padding: 5px 25px 5px 25px;
+  background-color: #1c31b2;
+}

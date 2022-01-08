@@ -1,0 +1,38 @@
+.twocol__cta button {
+  border-radius: 15px;
+  border: none;
+  height: 40px;
+}
+
+.twocol__cta button a {
+  padding: 30px;
+  font-size: 18px;
+}
+
+.twocol__cta a {
+  font-size: 18px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.twocol__content {
+  margin-top: 80px;
+}
+
+.twocol__content h1 {
+  font-size: 4rem;
+}
+
+.twocol__image {
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .twocol__content {
+    text-align: center !important;
+  }
+
+  .twocol__content {
+    margin-top: 5px;
+  }
+}

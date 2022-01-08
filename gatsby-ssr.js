@@ -1,10 +1,3 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
-import "@fontsource/open-sans/400.css"; // Select either normal or italic.
-import "@fontsource/ubuntu/700.css";
 import "normalize.css";
 import "./src/styles/global.css";
 import "./node_modules/bootstrap/dist/css/bootstrap.css";

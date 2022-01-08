@@ -2,11 +2,12 @@ import React from "react";
 import * as classes from "./Navbar.module.css";
 import logo from "../../images/lyne.png";
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
+import { Link } from "gatsby";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
-      <a className="navbar-brand" href="#">
+    <nav className="container navbar navbar-expand-lg navbar-light">
+      <Link to="/" className="navbar-brand" href="#">
         <img
           src={logo}
           width="100"
@@ -14,7 +15,7 @@ const Navbar = () => {
           className="d-inline-block align-top"
           alt=""
         />
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -32,19 +33,19 @@ const Navbar = () => {
           className={`${classes["nav__content"]} navbar-nav mr-auto mt-2 mt-lg-0 `}
         >
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/about-us">
               About
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/blogs">
               Blog
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link to="/pricing" className="nav-link">
               Pricing
-            </a>
+            </Link>
           </li>
         </ul>
 
