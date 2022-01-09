@@ -47,12 +47,13 @@ export const query = graphql`
         title {
           text
         }
-        body {
+        body1 {
           ... on PrismicSliceType {
             slice_type
           }
-          ...HomeDataBodyFeatures
-          ...HomeDataBodySponsored
+          ...HomepageDataBody1Features
+          ...HomepageDataBody1Sponsored
+          ...HomepageDataBody1Testimonials
         }
       }
     }
