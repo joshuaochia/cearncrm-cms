@@ -8,6 +8,7 @@ import "@fontsource/ubuntu/700.css";
 import "normalize.css";
 import "./src/styles/global.css";
 import "./node_modules/bootstrap/dist/css/bootstrap.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React from "react";
 import { Link } from "gatsby";
 import { PrismicProvider } from "@prismicio/react";

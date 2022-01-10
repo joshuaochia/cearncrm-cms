@@ -1,6 +1,6 @@
 import React from "react";
-import Title from "../Title";
-import Image from "../../images/image.png";
+import Title from "../components/Title";
+import Image from "../images/image.png";
 import * as classes from "./LatestBlogs.module.css";
 const LatestBlogs = () => {
   return (

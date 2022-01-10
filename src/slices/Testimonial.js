@@ -12,7 +12,11 @@ const Testimonial = ({ slice }) => {
     </div>
   ));
 
-  console.log(heading);
+  const testimonialList = slice.items
+    .filter((item) => item.testimonial.text !== "")
+    .map((item) => {
+      return { testimonial: item.testimonial };
+    });
 
   return (
     <div className={classes["testimonial"]}>
@@ -24,18 +28,8 @@ const Testimonial = ({ slice }) => {
         </div>
         <Title description={sub_heading.text} title={heading.text} />
         <div className="col-md-12 col-12 justify-content-center text-center mb-5 pb-5">
-          <p className={`${classes["client__testimonial"]}`}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1600s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-          <TestimonialItem></TestimonialItem>
+          <p className={`${classes["client__testimonial"]}`}></p>
+          <TestimonialItem content={testimonialList} />
         </div>
       </div>
     </div>
@@ -50,6 +44,9 @@ export const query = graphql`
     items {
       persons {
         url
+      }
+      testimonial {
+        text
       }
     }
     primary {

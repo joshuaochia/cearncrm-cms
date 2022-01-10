@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout/Layout";
-import LatestBlogs from "../components/Blog/LatestBlogs";
+import LatestBlogs from "../slices/LatestBlogs";
 
 import FourContent from "../components/FourContent";
 // markup
