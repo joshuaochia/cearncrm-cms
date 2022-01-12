@@ -12,12 +12,8 @@ const BlogItem = (props) => {
       <div
         className={`col-lg-10 col-sm-12 col-12 pt-3 pb-4 ${classes["blog__content"]}`}
       >
-        <h4>Lorem Ipsum</h4>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,{" "}
-        </p>
+        <h4>{props.title}</h4>
+        <p>{props.sub_title}</p>
         <button className="mt-2 primary-1">Read More</button>
       </div>
     </div>

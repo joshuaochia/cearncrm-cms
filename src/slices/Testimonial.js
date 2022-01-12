@@ -5,6 +5,7 @@ import Title from "../components/Title";
 import TestimonialItem from "../components/TestimonialItem";
 
 const Testimonial = ({ slice }) => {
+  if (!slice.items) return null;
   const { heading, sub_heading } = slice.primary;
   const personImgList = slice.items.map((item) => (
     <div className={`col-md-1 col-3 ${classes["image__item"]}`}>

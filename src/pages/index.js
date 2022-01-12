@@ -13,11 +13,6 @@ const IndexPage = ({ data }) => {
     title: heading,
   } = queryData;
 
-  console.log(queryData);
-  // <Sponsored />
-  // <Features />
-  //  <Testimonial />
-  //  <LatestBlogs />
   return (
     <React.Fragment>
       <TwoColumn
@@ -54,6 +49,7 @@ export const query = graphql`
           ...HomepageDataBody1Features
           ...HomepageDataBody1Sponsored
           ...HomepageDataBody1Testimonials
+          ...HomepageDataBody1LatestBlogs
         }
       }
     }

@@ -4,13 +4,19 @@ import Title from "../Title";
 import image1 from "../../images/thumbnail/1.png";
 import image2 from "../../images/thumbnail/2.png";
 import image3 from "../../images/thumbnail/3.png";
-const AllBlog = () => {
+import { data } from "jquery";
+const AllBlog = ({ items, content }) => {
+  const blogList = items.map(({ data }) => (
+    <BlogItem
+      sub_title={data.sub_title.text}
+      title={data.title.text}
+      img={data.thumbnail.url}
+    />
+  ));
   return (
     <div className="container">
-      <Title />
-      <BlogItem img={image1} />
-      <BlogItem img={image2} />
-      <BlogItem img={image3} />
+      <Title title={content.title.text} description={content.sub_title.text} />
+      {blogList}
     </div>
   );
 };

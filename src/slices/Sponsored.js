@@ -3,6 +3,7 @@ import * as classes from "./Sponsored.module.css";
 import { graphql } from "gatsby";
 
 const Sponsored = ({ slice }) => {
+  if (!slice.items) return null;
   const imageItems = slice.items.map((item) => (
     <div className="col-lg-2 col-sm-4 col-4">
       <img className="p-1 " height="40" src={item.sponsor_logo.url}></img>{" "}

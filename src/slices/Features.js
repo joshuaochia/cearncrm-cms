@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 
 const Features = ({ slice }) => {
   // Primary Destructuring
+  if (!slice.items) return null;
   const {
     feature_title: sectionTitle,
     feature_desciption: sectionDescription,

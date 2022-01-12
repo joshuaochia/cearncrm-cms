@@ -1,47 +1,68 @@
 import React from "react";
 import Title from "../components/Title";
-import Image from "../images/image.png";
+import { graphql } from "gatsby";
 import * as classes from "./LatestBlogs.module.css";
-const LatestBlogs = () => {
+
+const LatestBlogs = ({ slice }) => {
+  if (!slice.items) return null;
+  const { sub_heading, heading } = slice.primary;
+
+  const LatestBlogsList = slice.items.map((item) => (
+    <div className="col-sm-4 col-8 pt-3">
+      <div className={`card ${classes["custom__card"]}`}>
+        <img
+          className="card-img-top"
+          src={item.blog_thumbnail.url}
+          height="250"
+        />
+        <div className="card-body">
+          <h5 className="card-title">{item.blog_title.text}</h5>
+          <hr />
+          <p className="card-text mt-3">{item.blog_description.text}</p>
+          <a href={item.blog_readmore.url} className="pt-3">
+            Read more..
+          </a>
+        </div>
+      </div>
+    </div>
+  ));
+
   return (
     <div className={`container mb-5 mt-5 ${classes["parent_cards"]}`}>
-      <Title />
+      <Title title={heading.text} description={sub_heading.text} />
       <div className="row text-center justify-content-center">
-        <div className="col-sm-4 col-8 pt-3">
-          <div className={`card ${classes["custom__card"]}`}>
-            <img className="card-img-top" src={Image} alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <hr />
-              <p className="card-text mt-3">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="" className="pt-3">
-                Read more..
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-sm-4 col-8 pt-3">
-          <div className={`card ${classes["custom__card"]}`}>
-            <img className="card-img-top" src={Image} alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <hr />
-              <p className="card-text mt-3">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="" className="pt-3">
-                Read more..
-              </a>
-            </div>
-          </div>
-        </div>
+        {LatestBlogsList}
       </div>
     </div>
   );
 };
+
+export const query = graphql`
+  fragment HomepageDataBody1LatestBlogs on PrismicHomePageDataBody1LatestBlogs {
+    id
+    items {
+      blog_description {
+        text
+      }
+      blog_readmore {
+        url
+      }
+      blog_thumbnail {
+        url
+      }
+      blog_title {
+        text
+      }
+    }
+    primary {
+      heading {
+        text
+      }
+      sub_heading {
+        text
+      }
+    }
+  }
+`;
 
 export default LatestBlogs;
