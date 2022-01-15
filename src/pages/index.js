@@ -14,14 +14,14 @@ const IndexPage = ({ data }) => {
   } = queryData;
 
   return (
-    <React.Fragment>
+    <>
       <TwoColumn
         heading={heading}
         heroImg={twoColImg}
         subHeading={subHeading}
       />
       <SliceZone components={components} slices={queryData.body1} />
-    </React.Fragment>
+    </>
   );
 };
 

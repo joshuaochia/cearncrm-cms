@@ -6,8 +6,10 @@ import image2 from "../../images/thumbnail/2.png";
 import image3 from "../../images/thumbnail/3.png";
 import { data } from "jquery";
 const AllBlog = ({ items, content }) => {
-  const blogList = items.map(({ data }) => (
+  const blogList = items.map(({ data, uid, id }) => (
     <BlogItem
+      id={id}
+      url={uid}
       sub_title={data.sub_title.text}
       title={data.title.text}
       img={data.thumbnail.url}

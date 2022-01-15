@@ -2,7 +2,7 @@
 
 exports.linkResolver = (doc) => {
   if (doc.type === "blog") {
-    return `/${doc.uid}`;
+    return `blog/${doc.uid}`;
   }
 
   return "/";

@@ -1,7 +1,5 @@
 import React from "react";
-
 import * as classes from "./TwoColumn.module.css";
-
 import { FaPlayCircle } from "@react-icons/all-files/fa/FaPlayCircle";
 
 const TwoColumn = ({ subHeading, heroImg, heading }) => {

@@ -8,9 +8,9 @@ const IndexBlog = ({ data }) => {
   const { data: content } = data.prismicBlogList;
 
   return (
-    <React.Fragment>
+    <>
       <AllBlog content={content} items={BlogList} />
-    </React.Fragment>
+    </>
   );
 };
 
@@ -33,6 +33,8 @@ export const query = graphql`
             url
           }
         }
+        uid
+        id
       }
     }
     prismicBlogList {

@@ -10,14 +10,14 @@ const AboutUs = ({ data }) => {
   const { body1: homePageData } = data.prismicHomePage.data;
 
   return (
-    <React.Fragment>
+    <>
       <FourContent
         title={queryData.title}
         description={queryData.sub_title}
         items={queryData.four_content}
       />
       <SliceZone components={components} slices={homePageData} />
-    </React.Fragment>
+    </>
   );
 };
 

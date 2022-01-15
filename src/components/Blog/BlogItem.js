@@ -1,5 +1,6 @@
 import React from "react";
 import * as classes from "./BlogItem.module.css";
+import { PrismicLink } from "@prismicio/react";
 
 const BlogItem = (props) => {
   return (
@@ -14,7 +15,13 @@ const BlogItem = (props) => {
       >
         <h4>{props.title}</h4>
         <p>{props.sub_title}</p>
-        <button className="mt-2 primary-1">Read More</button>
+        <PrismicLink
+          id={props.id}
+          href={`blog/${props.url}`}
+          className="mt-2 primary-1"
+        >
+          Read More
+        </PrismicLink>
       </div>
     </div>
   );
