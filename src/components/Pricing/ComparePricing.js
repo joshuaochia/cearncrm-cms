@@ -2,10 +2,24 @@ import React from "react";
 import Title from "../Title";
 import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
 import { FaTimesCircle } from "@react-icons/all-files/fa/FaTimesCircle";
-const ComparePricing = () => {
+const ComparePricing = ({ title, description, items }) => {
+  const allCategory = items.map((item) => (
+    <tr>
+      <td>{item.category.text}</td>
+    </tr>
+  ));
+
+  const allCondition = items.map((item) => (
+    <tr>
+      <td>{!item.free ? <FaTimesCircle /> : <FaCheckCircle />}</td>
+      <td>{!item.standard ? <FaTimesCircle /> : <FaCheckCircle />}</td>
+      <td>{!item.premium ? <FaTimesCircle /> : <FaCheckCircle />}</td>
+    </tr>
+  ));
+
   return (
     <div className="container mb-5">
-      <Title />
+      <Title title={title.text} description={description.text} />
       <div className="row">
         <div className="col-md-3">
           <table className="table text-center">
@@ -14,29 +28,7 @@ const ComparePricing = () => {
                 <th scope="col">Lorem Ipsum</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Larry</td>
-              </tr>
-              <tr>
-                <td>Larry</td>
-              </tr>
-              <tr>
-                <td>Larry</td>
-              </tr>
-              <tr>
-                <td>Larry</td>
-              </tr>
-              <tr>
-                <td>Larry</td>
-              </tr>
-              <tr>
-                <td>Larry</td>
-              </tr>
-              <tr>
-                <td>Larry</td>
-              </tr>
-            </tbody>
+            <tbody>{allCategory}</tbody>
           </table>
         </div>
         <div className="col-md-9">
@@ -49,50 +41,8 @@ const ComparePricing = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  <FaTimesCircle />
-                </td>
-                <td>
-                  <FaCheckCircle />
-                </td>
-                <td>
-                  <FaCheckCircle />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <FaCheckCircle />
-                </td>
-                <td>
-                  <FaCheckCircle />
-                </td>
-                <td>
-                  <FaCheckCircle />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <FaCheckCircle />
-                </td>
-                <td>
-                  <FaTimesCircle />
-                </td>
-                <td>
-                  <FaTimesCircle />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <FaTimesCircle />
-                </td>
-                <td>
-                  <FaCheckCircle />
-                </td>
-                <td>
-                  <FaCheckCircle />
-                </td>
-              </tr>
+              {allCondition}
+
               <tr>
                 <td>
                   <button

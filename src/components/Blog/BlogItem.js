@@ -15,13 +15,15 @@ const BlogItem = (props) => {
       >
         <h4>{props.title}</h4>
         <p>{props.sub_title}</p>
-        <PrismicLink
-          id={props.id}
-          href={`blog/${props.url}`}
-          className="mt-2 primary-1"
-        >
-          Read More
-        </PrismicLink>
+        <div className="mt-4">
+          <PrismicLink
+            id={props.id}
+            href={`blog/${props.url}`}
+            className={` primary-1 ${classes["blog__readmore"]}`}
+          >
+            Read More
+          </PrismicLink>
+        </div>
       </div>
     </div>
   );

@@ -22,3 +22,14 @@
     text-align: center;
   }
 }
+
+.blog__readmore {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.blog__readmore:hover {
+  text-decoration: underline;
+  color: white;
+}
