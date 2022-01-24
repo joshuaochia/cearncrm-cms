@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../components/Title";
 import { graphql } from "gatsby";
 import * as classes from "./LatestBlogs.module.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const LatestBlogs = ({ slice }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   if (!slice.items) return null;
   const { sub_heading, heading } = slice.primary;
 
@@ -28,7 +34,10 @@ const LatestBlogs = ({ slice }) => {
   ));
 
   return (
-    <div className={`container mb-5 mt-5 ${classes["parent_cards"]}`}>
+    <div
+      data-aos="fade-up"
+      className={`container mb-5 mt-5 ${classes["parent_cards"]}`}
+    >
       <Title title={heading.text} description={sub_heading.text} />
       <div className="row text-center justify-content-center">
         {LatestBlogsList}

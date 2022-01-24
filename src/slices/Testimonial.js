@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as classes from "./Testimonial.module.css";
 import { graphql } from "gatsby";
 import Title from "../components/Title";
 import TestimonialItem from "../components/TestimonialItem";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Testimonial = ({ slice }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   if (!slice.items) return null;
   const { heading, sub_heading } = slice.primary;
   const personImgList = slice.items.map((item) => (
@@ -20,7 +26,7 @@ const Testimonial = ({ slice }) => {
     });
 
   return (
-    <div className={classes["testimonial"]}>
+    <div data-aos="fade-up" className={classes["testimonial"]}>
       <div className={`container ${classes["testimonial__content"]}`}>
         <div
           className={`pt-5 row justify-content-around ${classes["circle__images"]}`}

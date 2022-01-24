@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import * as classes from "./TwoColumn.module.css";
+
 import { FaPlayCircle } from "@react-icons/all-files/fa/FaPlayCircle";
 
 const TwoColumn = ({ subHeading, heroImg, heading }) => {
   return (
-    <div className="container">
+    <div className="container fadeUp">
       <div className="row mt-5 mb-5">
-        <div className={`col-md-6 col-sm-12 ${classes["twocol__content"]}`}>
+        <div className={`col-md-6 col-sm-12  ${classes["twocol__content"]} `}>
           <h1>{heading.text}</h1>
           <p>{subHeading.text}</p>
           <div

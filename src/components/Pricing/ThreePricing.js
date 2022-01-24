@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../Title";
 import * as classes from "./ThreePricing.module.css";
 import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const ThreePricing = ({ title, description, items }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const allPricing = items.map((item) => (
     <div className={`col-md-3 mb-5 mt-5`}>
       <div className={`text-center pb-5 ${classes["pricing__item"]}`}>
@@ -67,7 +73,7 @@ const ThreePricing = ({ title, description, items }) => {
   return (
     <div>
       <Title title={title.text} description={description.text} />
-      <div className="container">
+      <div data-aos="fade-up" className="container">
         <div className="pricings ">
           <div class="row justify-content-center">{allPricing}</div>
         </div>

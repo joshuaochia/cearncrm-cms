@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../components/Title";
 import * as classes from "./Features.module.css";
 import * as icons from "react-icons/fa";
 import { graphql } from "gatsby";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Features = ({ slice }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   // Primary Destructuring
   if (!slice.items) return null;
   const {
@@ -32,7 +38,10 @@ const Features = ({ slice }) => {
   });
 
   return (
-    <div className={`container text-center mb-5 ${classes["features"]}`}>
+    <div
+      data-aos="fade-up"
+      className={`container text-center mb-5 ${classes["features"]}`}
+    >
       <Title title={sectionTitle.text} description={sectionDescription.text} />
       <div className={`mt-5 ${classes["features_cards"]}`}>
         <div className="row">{ItemContent}</div>

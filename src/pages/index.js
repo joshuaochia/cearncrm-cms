@@ -1,11 +1,18 @@
 import * as React from "react";
+import { useEffect } from "react";
 import { graphql } from "gatsby";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../slices";
 import Layout from "../components/Layout/Layout";
 import TwoColumn from "../components/TwoColumn";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const IndexPage = ({ data }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const queryData = data.prismicHomePage.data;
   const {
     hero: twoColImg,
@@ -20,7 +27,11 @@ const IndexPage = ({ data }) => {
         heroImg={twoColImg}
         subHeading={subHeading}
       />
-      <SliceZone components={components} slices={queryData.body1} />
+      <SliceZone
+        data-aos="fade-in"
+        components={components}
+        slices={queryData.body1}
+      />
     </>
   );
 };
