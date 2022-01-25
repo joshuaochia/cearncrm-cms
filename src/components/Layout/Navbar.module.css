@@ -10,3 +10,24 @@
 #signup a {
   color: white !important;
 }
+
+@media only screen and (max-width: 767px) {
+  #signup {
+    border-radius: 0px !important;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .nav__content li a {
+    text-align: center;
+  }
+
+  #login {
+    background-image: linear-gradient(#fbab7e, #f7ce68);
+    text-align: center !important;
+    margin: 5px;
+  }
+  #login a {
+    color: white;
+  }
+}

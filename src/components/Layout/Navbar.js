@@ -1,12 +1,14 @@
 import React from "react";
 import * as classes from "./Navbar.module.css";
 import logo from "../../images/lyne.png";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 import { Link } from "gatsby";
 
-const Navbar = () => {
+const FullNavbar = () => {
   return (
-    <nav className="container navbar navbar-expand-lg navbar-light">
+    <Navbar bg="white" className="container" expand="lg">
       <Link to="/" className="navbar-brand" href="#">
         <img
           src={logo}
@@ -16,20 +18,13 @@ const Navbar = () => {
           alt=""
         />
       </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul
+      <Navbar.Collapse
+        className="collapse navbar-collapse"
+        id="navbarTogglerDemo02"
+      >
+        <Nav
           className={`${classes["nav__content"]} navbar-nav mr-auto mt-2 mt-lg-0 `}
         >
           <li className="nav-item">
@@ -47,12 +42,12 @@ const Navbar = () => {
               Pricing
             </Link>
           </li>
-        </ul>
+        </Nav>
 
-        <ul
+        <Nav
           className={`${classes["nav__content"]} navbar-nav ms-auto mt-2 mt-lg-0 `}
         >
-          <li className="nav-item">
+          <li id={classes.login} className="nav-item">
             <a className="nav-link" href="#">
               Login
             </a>
@@ -62,10 +57,10 @@ const Navbar = () => {
               SignUp {<FaArrowRight size={"0.8em"} />}
             </a>
           </li>
-        </ul>
-      </div>
-    </nav>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default FullNavbar;

@@ -1,6 +1,6 @@
 import classes from "./Layout.module.css";
 import React from "react";
-import Navbar from "./Navbar";
+import FullNavbar from "./Navbar";
 import Footer from "./Footer";
 import Announcement from "./Announcement";
 const Layout = (props) => {
@@ -8,7 +8,7 @@ const Layout = (props) => {
     <React.Fragment>
       <Announcement />
 
-      <Navbar />
+      <FullNavbar />
       {props.children}
       <Footer />
     </React.Fragment>
