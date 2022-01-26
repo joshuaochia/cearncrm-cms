@@ -18,3 +18,9 @@
   padding: 5px 25px 5px 25px;
   background-color: #1c31b2;
 }
+
+@media only screen and (max-width: 767px) {
+  .pricing__item {
+    margin: 0px 20px;
+  }
+}

@@ -10,7 +10,7 @@ const ThreePricing = ({ title, description, items }) => {
     Aos.init({ duration: 2000 });
   }, []);
   const allPricing = items.map((item) => (
-    <div className={`col-md-3 mb-5 mt-5`}>
+    <div className={`col-md-3  mt-5`}>
       <div className={`text-center pb-5 ${classes["pricing__item"]}`}>
         <div className="mt-4 title">
           <h5>{item.title.text}</h5>
@@ -71,7 +71,7 @@ const ThreePricing = ({ title, description, items }) => {
     </div>
   ));
   return (
-    <div>
+    <div className=" pb-5 pt-5">
       <Title title={title.text} description={description.text} />
       <div data-aos="fade-up" className="container">
         <div className="pricings ">

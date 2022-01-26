@@ -1,7 +1,9 @@
 import React from "react";
 import Title from "../Title";
+import * as classes from "./ComparePricing.module.css";
 import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
 import { FaTimesCircle } from "@react-icons/all-files/fa/FaTimesCircle";
+
 const ComparePricing = ({ title, description, items }) => {
   const allCategory = items.map((item) => (
     <tr>
@@ -18,7 +20,7 @@ const ComparePricing = ({ title, description, items }) => {
   ));
 
   return (
-    <div className="container mb-5">
+    <div className={`${classes["compare__pricing"]} container mb-5`}>
       <Title title={title.text} description={description.text} />
       <div className="row">
         <div className="col-md-3">
